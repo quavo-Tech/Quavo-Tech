@@ -1,75 +1,88 @@
-
+*{
+    margin: 0;
+    padding: 0;
+}
 body{
+    max-width: 100%;
     min-height: 100vh;
-    background: rgb(17, 15, 15);
-    color: white;
-}
-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-}
-nav .logo{
-    align-items: center;
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
-    font-weight: bold;
-    font-size: 2rem;
-    animation: slideInLeft  2s ease-in;
+    background:rgb(12, 12, 12);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+}
+.logo{
+    max-width: 100%;
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-left: 10px;
+    color: orangered;
+    animation: slideInLeft 2s ease-in-out;
 }
 
-.navbar{
-    display: flex;
-
-}
-.navbar li{
+nav ul{
+    width: 100%;
     list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
-.navbar a{
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
+nav li{
+    height: 50px;
+}
+nav a{
+    height: 100%;
+    padding: 0 30px;
     text-decoration: none;
-    margin: 0 30px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    transition:  all 0.5s ease;
+    display: flex;
+    align-items: center;
+    color: white;
+    transition: all .6s ease-in-out;
+   
 }
-.navbar a:hover{
-    color: rgb(187, 176, 176);
-    transform: translateY(-10px);
+nav a:hover{
+color: orangered;
+transform: translateY(-6px);
 }
-.btn {
-width: 100px;
-padding: 10px;
-margin-right: 20px;
-background: orangered;
-color: white;
-border: none;
-font-size: 14px;
-font-weight: bold;
-border-radius: 40px;
-cursor: pointer;
-transition: all .6s ease-in-out;
+nav li:first-child{
+    margin-right: auto;
 }
-.btn:hover{
-    background: transparent;
-    border: 2px solid orangered;
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    max-width: 100%;
+    z-index: 999;
+    background-color: rgba(12, 11, 11, 0.76);
+    backdrop-filter: blur(10px);
+    box-shadow:-10px 0 10px rgba(0,0,0,0.1) ;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
-#menu{
-color: white;
-margin-right: 30px;
-font-size: 25px;
-cursor: pointer;
-display: none;
+.sidebar li{
+    width: 100%;
+}
+.sidebar a{
+  width: 100%;
+}
+.sidebar i{
+    color: white;
+}
+.menubutton{
+    display: none;
 }
 section{
-    padding: 0px 4% 0px;
+   max-width: 100%;
 
 }
 .disp{
+    max-width: 100%;
+    margin-left: 20px;
     position: relative;
     height: 100vh;
     display: flex;
@@ -80,7 +93,7 @@ section{
 }
 .img{
   
-    max-width: 600px;
+    max-width: 100%;
     width: 100%;
     height: 100%;
     opacity: 0; 
@@ -88,8 +101,9 @@ section{
     object-fit: contain;
 }
 .disp-text h1{
-    font-size: 45px;
-    line-height:.002;
+max-width: 100%;
+font-size: 45px;
+ line-height:1;
   font-weight: 700;
   margin: 20px 0;
   text-transform: uppercase;
@@ -98,16 +112,20 @@ section{
 }
 .disp-text h1 span{
     color: orangered;
+    max-width: 100%;
 }
 .disp-text h6{
+    max-width: 100%;
     line-height: .002;
     font-size: 22px;
     font-weight: 600;
 }
 .disp-text h6 span{
+    max-width: 100%;
     color: orangered;
 }
 .disp-text h4{
+    max-width: 100%;
     line-height: 0.5;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size: 35px;
@@ -116,13 +134,15 @@ section{
 
 }
 .disp-text p{
+  
     font-size: 17px;
     color: rgba(128, 128, 128, 0.596);
     margin-bottom: 20px;
-    line-height: 1.5;
+    line-height: 1;
     
 }
 .disp-icons i{
+    max-width: 100%;
     display: inline-block;
     font-size: 28px;
     color: white;
@@ -212,3 +232,60 @@ background-color:orangered;
       opacity: 0;
     }
   }
+@media(max-width:780px){
+    .hideOnMobile{
+        display: none;
+    }
+    .menubutton{
+        display: block;
+    }
+}
+@media(max-width:400px){
+    .disp{
+        margin-top: 20px;
+        text-align: center;
+       }
+    .sidebar{
+        width: 100%;
+    }
+    .disp-text h1{
+        font-size: 10px;
+    }
+    .disp-text h4{
+        font-size: 13px;
+    }
+}
+/* Mobile */
+@media (max-width: 970px) {
+   .disp{
+    display: inline-block;
+    margin-top: 20px;
+    text-align: center;
+   }
+   .disp-text h1{
+    font-size: 28px;
+   }
+   .disp-text h4{
+    font-size: 24px;
+   }
+    nav .logo{
+       max-width: 100%;
+        color: orangered;
+    }
+    .navbar{
+        display: none;
+    }
+    #menu{
+        display: block;
+        color: white;
+    }
+    .img img{
+  max-width: 100%;
+ 
+    }
+    .disp-btn{
+        justify-content: center;
+    }
+    }
+    
+    

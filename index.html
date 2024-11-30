@@ -2,31 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/2b50a07227.js" crossorigin="anonymous"></script>
-    <title>Quavo-tech</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quavo-Tech</title>
 </head>
 <body>
     <nav>
-     <a href="#" class="logo">Quavo-tech</a>
-        <ul class="navbar">
-            <li><a href="#">Home</a></li>
+
+        <ul class="sidebar">
+            
+            <li onclick=hideSidebar()><i class="fa-solid fa-x"></i></a></li>
+            <li><a href="#">Education</a></li>
+            <li><a href="#">Skills</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Skills</a></li>
             <li><a href="#">Contact</a></li>
-
         </ul>
-        <button class="btn">Hire Me</button>
-        <i class="fa-solid fa-bars" id="menu"></i>
+<ul>
+    <li class="logo" >Quavo-Tech</li>
+    <li class="hideOnMobile"><a href="#">Education</a></li>
+    <li class="hideOnMobile"><a href="#">Skills</a></li>
+    <li class="hideOnMobile"><a href="#">Services</a></li>
+    <li class="hideOnMobile"><a href="#">Portfolio </a></li>
+    <li class="hideOnMobile"><a href="#">Contact</a></li>
+    <li class="menubutton" onclick=showSidebar()> <a href="#"><i class="fa-solid fa-bars"></i></a></li>
+</ul>
     </nav>
-
     <section class="disp">
         <div class="disp-text">
-            <h6>Hello,<span>my name is</span></h6>
+            <h6>Hello,<span>Am</span></h6>
             <h1><span>Quavo</span>Finnest</h1>
-            <h4>I am <span class="input"></span></h4>
+            <h4>A <span class="input"></span></h4>
             <p>Are you looking for quality services n' products! .Yes Quavo-Tech
                 is devoted to offering quality services to its client.A Two month warranty is
                 gurantted after purchasing our services.For More information Reach out through our 
@@ -50,16 +58,25 @@
        </div>
     </section>
 
-
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script type="text/javascript">
-
-        var typed = new Typed(".input",{
-            strings:[" A Web Developer."," A UI/UX Designer","An Android/IOS Developer",],
-            typeSpeed:80,
-            backspeed:70,
-            loop:true,
-        })
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display='flex'
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display='none'
+        }
     </script>
+     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+     <script type="text/javascript">
+ 
+         var typed = new Typed(".input",{
+             strings:[" Web Developer.","  UI/UX Designer","Android/IOS Developer",],
+             typeSpeed:80,
+             backspeed:70,
+             loop:true,
+         })
+     </script>
 </body>
 </html>
