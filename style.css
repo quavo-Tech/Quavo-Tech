@@ -3,23 +3,31 @@
     padding: 0;
 }
 body{
-    max-width: 100%;
+    justify-content: center;
     min-height: 100vh;
-    background:rgb(12, 12, 12);
+    background:linear-gradient(to right,#242323c9,#324141); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: white;
 }
+html{
+    scroll-behavior: smooth;
+
+}
 .logo{
-    max-width: 100%;
+ 
+    font-family: "Yuji Mai", serif;
     font-size: 30px;
     font-weight: 700;
     margin-top: 20px;
     margin-left: 10px;
     color: orangered;
-    animation: slideInLeft 2s ease-in-out;
+    animation: rotateLogo 3s ; 
+    transform-style: preserve-3d; 
+    transform-origin: center;
+   
 }
 
 nav ul{
@@ -34,26 +42,30 @@ nav li{
 }
 nav a{
     height: 100%;
+    font-family: "Bebas Neue", serif;
+    font-weight: bold;
+    font-size: 18px;
     padding: 0 30px;
     text-decoration: none;
     display: flex;
     align-items: center;
     color: white;
+    animation: slideInLeft 4s ;
     transition: all .6s ease-in-out;
    
 }
 nav a:hover{
 color: orangered;
-transform: translateY(-6px);
+transform: scale(1.2);
 }
 nav li:first-child{
     margin-right: auto;
 }
 .sidebar{
+   
     position: fixed;
-    top: 0;
     right: 0;
-    height: 100vh;
+    height: 30vh;
     max-width: 100%;
     z-index: 999;
     background-color: rgba(12, 11, 11, 0.76);
@@ -61,7 +73,7 @@ nav li:first-child{
     box-shadow:-10px 0 10px rgba(0,0,0,0.1) ;
     display: none;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
 }
 .sidebar li{
@@ -69,19 +81,23 @@ nav li:first-child{
 }
 .sidebar a{
   width: 100%;
+  margin-left: 200px;
+
+ 
 }
 .sidebar i{
     color: white;
+    margin-top: 20px;
+    margin-left: 460px;
+    font-weight: bold;
+    font-size: 27px;
 }
 .menubutton{
     display: none;
 }
-section{
-   max-width: 100%;
 
-}
 .disp{
-    max-width: 100%;
+
     margin-left: 20px;
     position: relative;
     height: 100vh;
@@ -93,7 +109,7 @@ section{
 }
 .img{
   
-    max-width: 100%;
+
     width: 100%;
     height: 100%;
     opacity: 0; 
@@ -101,9 +117,10 @@ section{
     object-fit: contain;
 }
 .disp-text h1{
-max-width: 100%;
+
 font-size: 45px;
  line-height:1;
+ font-family: "Bebas Neue", serif;
   font-weight: 700;
   margin: 20px 0;
   text-transform: uppercase;
@@ -115,54 +132,58 @@ font-size: 45px;
     max-width: 100%;
 }
 .disp-text h6{
-    max-width: 100%;
+
     line-height: .002;
     font-size: 22px;
     font-weight: 600;
 }
 .disp-text h6 span{
-    max-width: 100%;
+   
     color: orangered;
 }
 .disp-text h4{
-    max-width: 100%;
+
     line-height: 0.5;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Yuji Mai", serif;
+    font-style: normal;
     font-size: 35px;
     font-weight: bold;
     margin-bottom: 30px;
 
 }
 .disp-text p{
-  
+    margin-left: 10px;
     font-size: 17px;
-    color: rgba(128, 128, 128, 0.596);
+    color: rgb(150, 150, 150);
     margin-bottom: 20px;
     line-height: 1;
+    font-weight: bold;
     
 }
 .disp-icons i{
-    max-width: 100%;
+ 
     display: inline-block;
     font-size: 28px;
     color: white;
+    margin-left: 10px;
     margin-right: 20px;
     transition: all .6s ease;
     margin-bottom: 40px;
 }
 .disp-icons i:hover{
     transform: translateY(-10px);
-    color: orangered;
+    color:rgb(131, 131, 247) ;
 }
 .disp-btn{
     display: flex;
     align-items: center;
 }
-.btn1{
-    display: inline-block;
+.btn1 {
+    display:flex;
     padding: 15px 30px;
-    background-color: transparent;
-    color: white;
+    margin-left: 10px;
+    background: linear-gradient(to right,#242323c9,#324141);
+      color: white;
     text-decoration: none;
     font-size: 15px;
     font-weight: 700;
@@ -170,19 +191,21 @@ font-size: 45px;
     letter-spacing: .05em;
     border-radius: 30px;
     border:  2px 2px solid orangered;
-    box-shadow: 2px 2px 2px 2px orangered;
-    transition:  all .6s ease;
+    box-shadow: 2px 2px 2px 2px rgba(51, 45, 43, 0.829);
+    transition:  all 1s ease;
 }
 .btn1:hover{
 color: white;
-background-color:orangered;
+transform: scale(1.03);
+background:linear-gradient(to left,#080707c9,#306d6d);
 }
+
 .btn2{
-    display: inline-block;
+    display:flex;
     padding: 15px 30px;
     margin-left: 30px;
-    background-color: transparent;
-    color: white;
+    background: linear-gradient(to right,#242323c9,#324141);
+      color: white;
     text-decoration: none;
     font-size: 15px;
     font-weight: 700;
@@ -190,21 +213,103 @@ background-color:orangered;
     letter-spacing: .05em;
     border-radius: 30px;
     border:  2px 2px solid orangered;
-    box-shadow: 2px 2px 2px 2px orangered;
-    transition:  all .6s ease;
+    box-shadow: 2px 2px 2px 2px rgba(51, 45, 43, 0.829);
+    transition:  all 1s ease;
 }
 .btn2:hover{
 color: white;
-background-color:orangered;
+transform: scale(1.03);
+background:linear-gradient(to left,#080707c9,#306d6d);
 }
-.scroll {
-   position: absolute;
-   top: 98%;
-   left: 47%;
-   transform: translateY(-50%);
-   display: flex;
-   align-items: center;
+.h2 a{
+    text-align: center;
+    font-weight: 700;
+    text-decoration: none;
+   }
+.h2 h2{
+    text-align: center;
+    font-weight: 700;
+    font-size: 24px;
+    color: white;
+    transition: .6s ease-in-out;
+   }
+   .h2 h2:hover{
+    color: orangered;
+    transform: scale(1.2);
+   }
+.container {
+    max-width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap:2px;
+   
+   
+    }
+ 
+
+    .box {
+      width: 350px;
+      height: 250px;
+      margin: 20px;
+      background-color: #2122219f;
+      color: white;
+      justify-content: center;
+      font-size: 20px;
+      text-align: center;
+      border-radius: 10px;
+      transition: 0.6s;
+    }
+    .box:hover{
+        box-shadow: 2px 2px 2px 2px rgb(54, 54, 54);
+        transform: scale(1.03);
+    }
+.box i{
+ font-size: 4rem;
+ color: #779797;
 }
+
+.box h3{
+
+font-size: 22px;
+}
+.box p {
+    font-size: 16px;
+    line-height: 1.5;
+  
+    color: #d1d1d1;  
+}
+.btn3{
+    margin-top: 10px;
+    padding: 15px 30px;
+    background: rgb(112, 112, 160) ;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    transition: .5s ease-in-out;
+}
+.btn3:hover{
+    border: 2px solid rgb(112, 112, 160);
+    background: transparent;
+}
+
+
+
+
+
+
+
+@keyframes rotateLogo {
+    0% {
+        transform: rotateY(0deg); /* Start position: logo facing forward */
+    }
+    100% {
+        transform: rotateY(360deg); /* Rotate 180 degrees from right to left in 3D space */
+    }
+}
+
 @keyframes slideInLeft{
     from{
   transform: translateY(-300px);
