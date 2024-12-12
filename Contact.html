@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Oi&family=Rubik+Bubbles&family=Yuji+Mai&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/2b50a07227.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oi&family=Rubik+Bubbles&family=Yuji+Mai&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+</head>
+<body>
+    <nav>
+
+        <ul class="sidebar">
+            
+            <li onclick=hideSidebar()><i class="fa-solid fa-x"></i></a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Skills</a></li>
+            <li><a href="index.html">Services</a></li>
+            <li><a href="Project.html">Projects</a></li>
+            <li><a href="#Contact.html"  id="Contact">Contact</a></li>
+        </ul>
+ <ul class="btnv">
+    <li class="logo" id="logo" >Quavo-Tech</li>
+    <li class="hideOnMobile" ><a href="index.html">Home</a></li>
+    <li class="hideOnMobile"><a href="index.html">Skills</a></li>
+    <li class="hideOnMobile"><a href="index.html">Services</a></li>
+    <li class="hideOnMobile"><a href="Project.html">Projects</a></li>
+    <li class="hideOnMobile" id="Contact"><a href="#">Contact</a></li>
+    <li class="menubutton" onclick=showSidebar()> <a href="#"><i class="fa-solid fa-bars"></i></a></li>
+   
+ </ul>
+
+
+</nav> 
+
+
+
+<div class="conta">
+ 
+  
+</div>
+      
+   <div class="form">
+      <h2>Lets Work Together</h2>
+    <div class="form-cont">
+        <input type="text"  id="fi2" placeholder="First name" required>
+      
+        <input type="text"id="fi2" placeholder="Last name" class="fe">
+        <br>
+        <input type="email" id="fi4" placeholder="Your Email" >
+        <br>
+       <textarea name="" id="fi5" placeholder="Message"></textarea>
+        <br>
+        <button class="we">Send Message</button>
+    </div>
+   </div>
+
+   
+<script>
+    function showSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display='flex'
+    }
+    function hideSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display='none'
+    }
+</script>
+</body>
+<footer class="footer">
+    <div class="det">
+       <h2>Connect With Us</h2>
+         <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+       <div class="btn5">
+          <button id="btn5">Website feedback</button>
+       </div>
+   </div>
+  
+
+    <div class="det2">
+        <input type="email" name="Email" id="email" placeholder="Your Email Address">
+        <button class="em">SignUp</button>
+       
+     </div>
+
+     <div class="det3">
+      <h2>Call Us</h2>
+      <h3>+254766--0560-566S</h3>
+      <h4>Location</h4>
+      <p>Muranga,kabati</p>
+     </div>
+
+   </footer>
+
+   <div class="copy">
+      <p>@copyright Quavo-tech 2024</p>
+   </div>
+</html>
